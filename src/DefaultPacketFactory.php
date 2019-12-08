@@ -29,20 +29,20 @@ class DefaultPacketFactory implements PacketFactory
      * @var string[]
      */
     private static $mapping = [
-        Packet::TYPE_CONNECT => ConnectRequestPacket::class,
-        Packet::TYPE_CONNACK => ConnectResponsePacket::class,
-        Packet::TYPE_PUBLISH => PublishRequestPacket::class,
-        Packet::TYPE_PUBACK => PublishAckPacket::class,
-        Packet::TYPE_PUBREC => PublishReceivedPacket::class,
-        Packet::TYPE_PUBREL => PublishReleasePacket::class,
-        Packet::TYPE_PUBCOMP => PublishCompletePacket::class,
-        Packet::TYPE_SUBSCRIBE => SubscribeRequestPacket::class,
-        Packet::TYPE_SUBACK => SubscribeResponsePacket::class,
-        Packet::TYPE_UNSUBSCRIBE => UnsubscribeRequestPacket::class,
-        Packet::TYPE_UNSUBACK => UnsubscribeResponsePacket::class,
-        Packet::TYPE_PINGREQ => PingRequestPacket::class,
-        Packet::TYPE_PINGRESP => PingResponsePacket::class,
-        Packet::TYPE_DISCONNECT => DisconnectRequestPacket::class,
+        Packet::TYPE_CONNECT => 'BinSoul\Net\Mqtt\Packet\ConnectRequestPacket',
+        Packet::TYPE_CONNACK => 'BinSoul\Net\Mqtt\Packet\ConnectResponsePacket',
+        Packet::TYPE_PUBLISH => 'BinSoul\Net\Mqtt\Packet\PublishRequestPacket',
+        Packet::TYPE_PUBACK => 'BinSoul\Net\Mqtt\Packet\PublishAckPacket',
+        Packet::TYPE_PUBREC => 'BinSoul\Net\Mqtt\Packet\PublishReceivedPacket',
+        Packet::TYPE_PUBREL => 'BinSoul\Net\Mqtt\Packet\PublishReleasePacket',
+        Packet::TYPE_PUBCOMP => 'BinSoul\Net\Mqtt\Packet\PublishCompletePacket',
+        Packet::TYPE_SUBSCRIBE => 'BinSoul\Net\Mqtt\Packet\SubscribeRequestPacket',
+        Packet::TYPE_SUBACK => 'BinSoul\Net\Mqtt\Packet\SubscribeResponsePacket',
+        Packet::TYPE_UNSUBSCRIBE => 'BinSoul\Net\Mqtt\Packet\UnsubscribeRequestPacket',
+        Packet::TYPE_UNSUBACK => 'BinSoul\Net\Mqtt\Packet\UnsubscribeResponsePacket',
+        Packet::TYPE_PINGREQ => 'BinSoul\Net\Mqtt\Packet\PingRequestPacket',
+        Packet::TYPE_PINGRESP => 'BinSoul\Net\Mqtt\Packet\PingResponsePacket',
+        Packet::TYPE_DISCONNECT => 'BinSoul\Net\Mqtt\Packet\DisconnectRequestPacket',
     ];
 
     public function build($type)
